@@ -249,20 +249,20 @@ description: 模仿《读者》《意林》风格的情感观点文写作 skill�
 
 ```bash
 # 1. 按关键词搜索相关范文（推荐先使用语义搜索）
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=亲情+观点+反向&top_k=5"
+curl "https://<your-magazine-api>.workers.dev/search?q=亲情+观点+反向&top_k=5"
 
 # 2. 已知 ID 直接读取全文（情感观点文重点学习以下文章）
-curl "https://magazine-api.seldomsemail.workers.dev/article/24725"
-curl "https://magazine-api.seldomsemail.workers.dev/article/19448"
-curl "https://magazine-api.seldomsemail.workers.dev/article/24924"
-curl "https://magazine-api.seldomsemail.workers.dev/article/26594"
-curl "https://magazine-api.seldomsemail.workers.dev/article/19728"
+curl "https://<your-magazine-api>.workers.dev/article/24725"
+curl "https://<your-magazine-api>.workers.dev/article/19448"
+curl "https://<your-magazine-api>.workers.dev/article/24924"
+curl "https://<your-magazine-api>.workers.dev/article/26594"
+curl "https://<your-magazine-api>.workers.dev/article/19728"
 
 # 3. 按话题搜索
-# 亲情类观点: curl "https://magazine-api.seldomsemail.workers.dev/search?q=母爱+父爱+不同看法&top_k=5"
-# 友情类观点: curl "https://magazine-api.seldomsemail.workers.dev/search?q=友谊+边界+选择&top_k=5"
-# 爱情类观点: curl "https://magazine-api.seldomsemail.workers.dev/search?q=爱情+婚姻+真相&top_k=5"
-# 人生观点类: curl "https://magazine-api.seldomsemail.workers.dev/search?q=人生+选择+不同角度&top_k=5"
+# 亲情类观点: curl "https://<your-magazine-api>.workers.dev/search?q=母爱+父爱+不同看法&top_k=5"
+# 友情类观点: curl "https://<your-magazine-api>.workers.dev/search?q=友谊+边界+选择&top_k=5"
+# 爱情类观点: curl "https://<your-magazine-api>.workers.dev/search?q=爱情+婚姻+真相&top_k=5"
+# 人生观点类: curl "https://<your-magazine-api>.workers.dev/search?q=人生+选择+不同角度&top_k=5"
 ```
 
 **搜索关键词建议**：
@@ -285,7 +285,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/19728"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=为你好+控制+爱的表达&top_k=3"`。重点读取 ID 24725（这种母爱）学习如何从"令人不适的爱"切入并完成观点翻转。同时读取 ID 19448（父亲为什么沉默）学习以"沉默"这种负面的情感表现形式反向论证爱的存在。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=为你好+控制+爱的表达&top_k=3"`。重点读取 ID 24725（这种母爱）学习如何从"令人不适的爱"切入并完成观点翻转。同时读取 ID 19448（父亲为什么沉默）学习以"沉默"这种负面的情感表现形式反向论证爱的存在。
 
 2. **确定结构**：
    - 开头（共情场景）：写一个日常冲突——母亲因为"为你好"强迫你做某件事，你抗拒地关门，门外的沉默
@@ -305,7 +305,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/19728"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=亲密关系+伤害+边界&top_k=3"`。重点读取 ID 24725 学习"亲密关系中的不适感"的写法，读取 ID 26594（父亲的裸捐与我的未来）学习如何处理亲密关系中的"冲突与和解"。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=亲密关系+伤害+边界&top_k=3"`。重点读取 ID 24725 学习"亲密关系中的不适感"的写法，读取 ID 26594（父亲的裸捐与我的未来）学习如何处理亲密关系中的"冲突与和解"。
 
 2. **确定结构**：
    - 开头（故事场景）：一对情侣在餐厅吵架——起因是一句话，扩散到过去三个月的所有不满

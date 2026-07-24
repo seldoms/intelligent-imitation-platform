@@ -232,21 +232,21 @@ description: 模仿《读者》《意林》风格的微型故事（600-1000字�
 
 ```bash
 # 1. 按关键词搜索微型故事类范文
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=短篇+故事+转折+反转&top_k=5"
+curl "https://<your-magazine-api>.workers.dev/search?q=短篇+故事+转折+反转&top_k=5"
 
 # 2. 已知 ID 直接读取全文
-curl "https://magazine-api.seldomsemail.workers.dev/article/24924"
-curl "https://magazine-api.seldomsemail.workers.dev/article/1261"
-curl "https://magazine-api.seldomsemail.workers.dev/article/26594"
-curl "https://magazine-api.seldomsemail.workers.dev/article/15762"
-curl "https://magazine-api.seldomsemail.workers.dev/article/16657"
+curl "https://<your-magazine-api>.workers.dev/article/24924"
+curl "https://<your-magazine-api>.workers.dev/article/1261"
+curl "https://<your-magazine-api>.workers.dev/article/26594"
+curl "https://<your-magazine-api>.workers.dev/article/15762"
+curl "https://<your-magazine-api>.workers.dev/article/16657"
 
 # 3. 按故事类型搜索
-# 亲情反转: curl "https://magazine-api.seldomsemail.workers.dev/search?q=母亲+孩子+反转+短篇&top_k=5"
-# 隔阂和解: curl "https://magazine-api.seldomsemail.workers.dev/search?q=父子+沉默+和解+故事&top_k=5"
-# 陌生人善意: curl "https://magazine-api.seldomsemail.workers.dev/search?q=陌生人+温暖+转折+短篇&top_k=5"
-# 身份揭示: curl "https://magazine-api.seldomsemail.workers.dev/search?q=身份+秘密+最后才知道&top_k=5"
-# 对话推进: curl "https://magazine-api.seldomsemail.workers.dev/search?q=对话+场景+短故事&top_k=5"
+# 亲情反转: curl "https://<your-magazine-api>.workers.dev/search?q=母亲+孩子+反转+短篇&top_k=5"
+# 隔阂和解: curl "https://<your-magazine-api>.workers.dev/search?q=父子+沉默+和解+故事&top_k=5"
+# 陌生人善意: curl "https://<your-magazine-api>.workers.dev/search?q=陌生人+温暖+转折+短篇&top_k=5"
+# 身份揭示: curl "https://<your-magazine-api>.workers.dev/search?q=身份+秘密+最后才知道&top_k=5"
+# 对话推进: curl "https://<your-magazine-api>.workers.dev/search?q=对话+场景+短故事&top_k=5"
 
 # 4. 获取所有暗渡陈仓风格以外的范文（微型故事通常不在暗渡序列中）
 ```
@@ -274,7 +274,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/16657"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=信+迟到的道歉+等待&top_k=3"` 和 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=短篇+反转+留白&top_k=3"`。读取 ID 26594 学习"设伏-引爆"结构，读取 ID 15762 学习"断在最高处"的结尾方式。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=信+迟到的道歉+等待&top_k=3"` 和 `curl "https://<your-magazine-api>.workers.dev/search?q=短篇+反转+留白&top_k=3"`。读取 ID 26594 学习"设伏-引爆"结构，读取 ID 15762 学习"断在最高处"的结尾方式。
 
 2. **确定结构**：
    - 开头（200字，对话/动作开场）：一个男人在整理父亲遗物时发现一封信，收件人是一位远在异地的老战友。"三十年""从未寄出"——两个信息建立悬念，读者会问"信里写了什么？为什么没寄出？"
@@ -294,7 +294,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/16657"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=职场+同事+秘密+反转&top_k=3"` 和 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=对话+冲突+真实身份&top_k=3"`。读取 ID 16657 学习"固定场景中依靠对话推进故事"的技法，读取 ID 1261 学习"第一段就建立矛盾"的节奏。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=职场+同事+秘密+反转&top_k=3"` 和 `curl "https://<your-magazine-api>.workers.dev/search?q=对话+冲突+真实身份&top_k=3"`。读取 ID 16657 学习"固定场景中依靠对话推进故事"的技法，读取 ID 1261 学习"第一段就建立矛盾"的节奏。
 
 2. **确定结构**：
    - 开头（180字，对话开场）："你为什么要帮我？"她看着对面的男人，语气里没有感激，只有警惕。他说："因为我也在帮我自己。"这句让对方（和读者）立刻警觉——这不是一个无私的帮助，背后另有动机。

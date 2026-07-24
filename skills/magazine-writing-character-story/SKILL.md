@@ -260,20 +260,20 @@ description: 模仿《读者》《意林》风格的人物故事写作 skill，�
 
 ```bash
 # 1. 按人名搜索
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=窦骁+绅士&top_k=3"
+curl "https://<your-magazine-api>.workers.dev/search?q=窦骁+绅士&top_k=3"
 
 # 2. 按人物类型搜索
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=女外交家+谈判+成长&top_k=3"
+curl "https://<your-magazine-api>.workers.dev/search?q=女外交家+谈判+成长&top_k=3"
 
 # 3. 按人物品质搜索
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=坚持+梦想+逆袭+真实人物&top_k=5"
+curl "https://<your-magazine-api>.workers.dev/search?q=坚持+梦想+逆袭+真实人物&top_k=5"
 
 # 4. 已知 ID 直接读取全文
-curl "https://magazine-api.seldomsemail.workers.dev/article/15762"
-curl "https://magazine-api.seldomsemail.workers.dev/article/15768"
-curl "https://magazine-api.seldomsemail.workers.dev/article/15786"
-curl "https://magazine-api.seldomsemail.workers.dev/article/15800"
-curl "https://magazine-api.seldomsemail.workers.dev/article/16333"
+curl "https://<your-magazine-api>.workers.dev/article/15762"
+curl "https://<your-magazine-api>.workers.dev/article/15768"
+curl "https://<your-magazine-api>.workers.dev/article/15786"
+curl "https://<your-magazine-api>.workers.dev/article/15800"
+curl "https://<your-magazine-api>.workers.dev/article/16333"
 ```
 
 **搜索关键词建议**：
@@ -300,7 +300,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/16333"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=窦骁+绅士+教养+细节&top_k=3"` 和 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=演员+修养+低调&top_k=3"`。读取 ID 15762 学习人物故事的开场方式和片段组织手法。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=窦骁+绅士+教养+细节&top_k=3"` 和 `curl "https://<your-magazine-api>.workers.dev/search?q=演员+修养+低调&top_k=3"`。读取 ID 15762 学习人物故事的开场方式和片段组织手法。
 
 2. **确定核心品质**：
    - 核心品质：**有边界感的绅士**
@@ -326,7 +326,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/16333"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=乡村教师+守护+奉献+真实人物&top_k=3"` 和 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=大山+教育+坚持+困顿&top_k=3"`。读取 ID 16333 学习群像叙事中的低谷刻画方法。读取 ID 15768 学习"从困境到坚守"的成长弧线写法。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=乡村教师+守护+奉献+真实人物&top_k=3"` 和 `curl "https://<your-magazine-api>.workers.dev/search?q=大山+教育+坚持+困顿&top_k=3"`。读取 ID 16333 学习群像叙事中的低谷刻画方法。读取 ID 15768 学习"从困境到坚守"的成长弧线写法。
 
 2. **确定核心品质**：
    - 核心品质：**执着的守护**

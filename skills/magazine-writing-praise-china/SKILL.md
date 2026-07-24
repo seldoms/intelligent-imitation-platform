@@ -121,11 +121,11 @@ description: 模仿《意林》《读者》式"暗渡陈仓"文风，从外国�
 
 ```bash
 # 获取暗渡陈仓范文列表
-curl https://magazine-api.seldomsemail.workers.dev/satirical
+curl https://<your-magazine-api>.workers.dev/satirical
 
 # 阅读范文全文
-curl https://magazine-api.seldomsemail.workers.dev/article/{id}
+curl https://<your-magazine-api>.workers.dev/article/{id}
 
 # 在284篇中语义搜索同主题
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=中国+高铁+对比&top_k=5"
+curl "https://<your-magazine-api>.workers.dev/search?q=中国+高铁+对比&top_k=5"
 ```

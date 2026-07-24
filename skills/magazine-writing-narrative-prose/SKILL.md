@@ -207,18 +207,18 @@ description: 模仿《读者》《意林》风格的叙事散文写作 skill，�
 
 ```bash
 # 1. 按关键词搜索叙事散文类范文
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=父亲+沉默+背影+叙事&top_k=5"
+curl "https://<your-magazine-api>.workers.dev/search?q=父亲+沉默+背影+叙事&top_k=5"
 
 # 2. 已知 ID 直接读取全文
-curl "https://magazine-api.seldomsemail.workers.dev/article/19728"
-curl "https://magazine-api.seldomsemail.workers.dev/article/24725"
-curl "https://magazine-api.seldomsemail.workers.dev/article/19448"
-curl "https://magazine-api.seldomsemail.workers.dev/article/225"
+curl "https://<your-magazine-api>.workers.dev/article/19728"
+curl "https://<your-magazine-api>.workers.dev/article/24725"
+curl "https://<your-magazine-api>.workers.dev/article/19448"
+curl "https://<your-magazine-api>.workers.dev/article/225"
 
 # 3. 按叙事类型搜索
-# 成长叙事: curl "https://magazine-api.seldomsemail.workers.dev/search?q=童年+成长+回忆+故事&top_k=5"
-# 人物叙事: curl "https://magazine-api.seldomsemail.workers.dev/search?q=母亲+父亲+一件小事&top_k=5"
-# 时代叙事: curl "https://magazine-api.seldomsemail.workers.dev/search?q=这些那年+以前+现在&top_k=5"
+# 成长叙事: curl "https://<your-magazine-api>.workers.dev/search?q=童年+成长+回忆+故事&top_k=5"
+# 人物叙事: curl "https://<your-magazine-api>.workers.dev/search?q=母亲+父亲+一件小事&top_k=5"
+# 时代叙事: curl "https://<your-magazine-api>.workers.dev/search?q=这些那年+以前+现在&top_k=5"
 ```
 
 **搜索关键词建议**：
@@ -242,7 +242,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/225"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=父亲+送别+火车站+沉默&top_k=3"` 和 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=第一次+离别+细节&top_k=3"`。读取 ID 19448 学习"父亲为什么沉默"的叙事方式和人物刻画手法。读取 ID 19728 学习场景描写和时间线控制。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=父亲+送别+火车站+沉默&top_k=3"` 和 `curl "https://<your-magazine-api>.workers.dev/search?q=第一次+离别+细节&top_k=3"`。读取 ID 19448 学习"父亲为什么沉默"的叙事方式和人物刻画手法。读取 ID 19728 学习场景描写和时间线控制。
 
 2. **确定结构**：
    - 开头（倒叙）："那年秋天我十八岁，第一次出远门上学。父亲坚持要送我到火车站。"
@@ -262,7 +262,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/225"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=室友+朋友+青春+往事&top_k=3"` 和 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=大学+友情+细节&top_k=3"`。读取 ID 225 学习如何用时间线串联不同阶段的人和事。读取 ID 24725 学习从具体小事切入、层层展开的叙事方式。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=室友+朋友+青春+往事&top_k=3"` 和 `curl "https://<your-magazine-api>.workers.dev/search?q=大学+友情+细节&top_k=3"`。读取 ID 225 学习如何用时间线串联不同阶段的人和事。读取 ID 24725 学习从具体小事切入、层层展开的叙事方式。
 
 2. **确定结构**：
    - 开头（场景式）：大学宿舍，每天早上那个室友都会多买一份早餐放在我桌上——明明我闹钟响了他也没醒，可他总是比我早起

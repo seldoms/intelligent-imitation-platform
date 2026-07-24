@@ -229,20 +229,20 @@ description: 模仿《读者》《意林》风格的哲理散文写作 skill，�
 
 ```bash
 # 1. 按关键词搜索哲理散文类范文
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=差距+对比+追问+哲理&top_k=5"
+curl "https://<your-magazine-api>.workers.dev/search?q=差距+对比+追问+哲理&top_k=5"
 
 # 2. 已知 ID 直接读取全文
-curl "https://magazine-api.seldomsemail.workers.dev/article/22027"
-curl "https://magazine-api.seldomsemail.workers.dev/article/206"
-curl "https://magazine-api.seldomsemail.workers.dev/article/24924"
-curl "https://magazine-api.seldomsemail.workers.dev/article/17285"
-curl "https://magazine-api.seldomsemail.workers.dev/article/226"
+curl "https://<your-magazine-api>.workers.dev/article/22027"
+curl "https://<your-magazine-api>.workers.dev/article/206"
+curl "https://<your-magazine-api>.workers.dev/article/24924"
+curl "https://<your-magazine-api>.workers.dev/article/17285"
+curl "https://<your-magazine-api>.workers.dev/article/226"
 
 # 3. 按说理方式搜索
-# 对比结构类: curl "https://magazine-api.seldomsemail.workers.dev/search?q=城市+农村+对比+差距&top_k=5"
-# 比喻说理类: curl "https://magazine-api.seldomsemail.workers.dev/search?q=像+比喻+生活+道理&top_k=5"
-# 重新定义类: curl "https://magazine-api.seldomsemail.workers.dev/search?q=什么是+真正+重新理解&top_k=5"
-# 物象升华类: curl "https://magazine-api.seldomsemail.workers.dev/search?q=物件+小事+想到+人生&top_k=5"
+# 对比结构类: curl "https://<your-magazine-api>.workers.dev/search?q=城市+农村+对比+差距&top_k=5"
+# 比喻说理类: curl "https://<your-magazine-api>.workers.dev/search?q=像+比喻+生活+道理&top_k=5"
+# 重新定义类: curl "https://<your-magazine-api>.workers.dev/search?q=什么是+真正+重新理解&top_k=5"
+# 物象升华类: curl "https://<your-magazine-api>.workers.dev/search?q=物件+小事+想到+人生&top_k=5"
 
 # 4. 获取所有暗渡陈仓风格以外的范文（哲理散文通常不在暗渡序列中）
 ```
@@ -270,7 +270,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/226"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=手机+科技+人与人的距离&top_k=3"` 和 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=对比+时代+生活&top_k=3"`。读取 ID 22027 学习"并联式片段对比"的写法，读取 ID 226 学习"重新定义常识概念"的思路。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=手机+科技+人与人的距离&top_k=3"` 和 `curl "https://<your-magazine-api>.workers.dev/search?q=对比+时代+生活&top_k=3"`。读取 ID 22027 学习"并联式片段对比"的写法，读取 ID 226 学习"重新定义常识概念"的思路。
 
 2. **确定结构**：
    - 开头（场景式）：周末清理旧手机，打开微信，发现联系人列表里有三分之二的人——至少有两年没说过话了。通讯录越满，真正在说话的人越少。
@@ -293,7 +293,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/226"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=舍不得+使用+最好的&top_k=3"` 和 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=日常+物件+人生+道理&top_k=3"`。读取 ID 24924 学习"从一个日常动作切入，追问个没完"的写法，读取 ID 17285 学习"对比推进"的技巧。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=舍不得+使用+最好的&top_k=3"` 和 `curl "https://<your-magazine-api>.workers.dev/search?q=日常+物件+人生+道理&top_k=3"`。读取 ID 24924 学习"从一个日常动作切入，追问个没完"的写法，读取 ID 17285 学习"对比推进"的技巧。
 
 2. **确定结构**：
    - 开头（物件式）：母亲买了一条新床单，花色很好看，她说"等客人来了再用"。那条床单在柜子里放了三年，一次客人也没来过。后来拿出来的时候，已经泛黄了。

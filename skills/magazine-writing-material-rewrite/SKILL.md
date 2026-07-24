@@ -148,10 +148,10 @@ description: 把简单的素材/故事/新闻改写成《读者》《意林》�
 
 ```bash
 # 搜同类素材的写法
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=从科学发现写成的文章&top_k=5"
+curl "https://<your-magazine-api>.workers.dev/search?q=从科学发现写成的文章&top_k=5"
 
 # 搜具体主题
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=美食文化现象&top_k=5"
+curl "https://<your-magazine-api>.workers.dev/search?q=美食文化现象&top_k=5"
 ```
 
 ---

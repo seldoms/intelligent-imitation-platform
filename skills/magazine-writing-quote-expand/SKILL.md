@@ -148,10 +148,10 @@ description: 根据一句名言/金句/诗句，写一篇《读者》《意林�
 
 ```bash
 # 搜同一句名言的不同写法
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=人生感悟&top_k=5"
+curl "https://<your-magazine-api>.workers.dev/search?q=人生感悟&top_k=5"
 
 # 搜哲理类文章参考结构
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=金句展开&top_k=3"
+curl "https://<your-magazine-api>.workers.dev/search?q=金句展开&top_k=3"
 ```
 
 ---

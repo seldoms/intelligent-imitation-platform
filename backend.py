@@ -19,8 +19,12 @@ from fastapi.staticfiles import StaticFiles
 
 SKILLS_ROOT = os.environ.get("SKILLS_ROOT", os.path.expanduser("~/.workbuddy/skills"))
 EXCLUDE_SKILLS = {"magazine-writing-router", "magazine-writing-deploy-magazine-api"}
-MAGAZINE_BASE = "https://magazine-api.seldomsemail.workers.dev"
-# 语料库代理：默认空（直连）。若用户网络无法直连 workers.dev，可在界面填写本地代理。
+# 语料库 API 地址：从环境变量读取，默认空。
+# 需自行在 Cloudflare 部署 magazine-api（见 magazine-api/DEPLOY.md），
+# 然后用 -e MAGAZINE_BASE=https://<你的子域名>.workers.dev 传入。
+# 留空时跳过范文检索，仅凭写作技能生成（范文只是增强项）。
+MAGAZINE_BASE = os.environ.get("MAGAZINE_BASE", "").rstrip("/")
+# 语料库代理：默认空（直连）。若你的网络无法直连语料库地址，可在界面填写本地代理。
 PROXY = os.environ.get("MAGAZINE_PROXY", "")
 DEEPSEEK_URL = "https://api.deepseek.com/chat/completions"
 DEEPSEEK_MODEL = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
@@ -116,6 +120,8 @@ def classify_input(text: str) -> str:
 def fetch_references(topic: str, top_k: int = 5, proxy: str = ""):
     """拉语料库范文。proxy 为空则直连；代理不通/失败则快速降级（范文仅为增强项）。"""
     refs = []
+    if not MAGAZINE_BASE:
+        return [], "未配置语料库地址（MAGAZINE_BASE）。请参考 magazine-api/DEPLOY.md 自行部署后配置；（范文仅为增强项，跳过也能正常生成）"
     proxies = {"https": proxy, "http": proxy} if proxy else None
     try:
         r = requests.get(f"{MAGAZINE_BASE}/search",
@@ -138,7 +144,7 @@ def fetch_references(topic: str, top_k: int = 5, proxy: str = ""):
     except Exception as e:
         hint = ""
         if not proxy:
-            hint = "若你在中国大陆等无法直接访问 workers.dev 的网络环境，请在本页『代理地址』填写本地代理（例如 http://127.0.0.1:7897）后重试。"
+            hint = "若你所处网络无法直接访问语料库地址，请在本页『代理地址』填写本地代理（例如 http://127.0.0.1:7897）后重试。"
         return [], f"语料库检索失败：{e}。{hint}（范文仅为增强项，跳过也能正常生成）"
     return refs, None
 

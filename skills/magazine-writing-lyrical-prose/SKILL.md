@@ -160,18 +160,18 @@ description: 模仿《读者》《意林》风格的抒情散文写作 skill，�
 
 ```bash
 # 1. 按关键词搜索相关范文（推荐先使用语义搜索）
-curl "https://magazine-api.seldomsemail.workers.dev/search?q=母爱+细节+龙眼&top_k=5"
+curl "https://<your-magazine-api>.workers.dev/search?q=母爱+细节+龙眼&top_k=5"
 
 # 2. 已知 ID 直接读取全文
-curl "https://magazine-api.seldomsemail.workers.dev/article/19728"
-curl "https://magazine-api.seldomsemail.workers.dev/article/24725"
-curl "https://magazine-api.seldomsemail.workers.dev/article/24924"
-curl "https://magazine-api.seldomsemail.workers.dev/article/22027"
+curl "https://<your-magazine-api>.workers.dev/article/19728"
+curl "https://<your-magazine-api>.workers.dev/article/24725"
+curl "https://<your-magazine-api>.workers.dev/article/24924"
+curl "https://<your-magazine-api>.workers.dev/article/22027"
 
 # 3. 按主题搜索（替换关键词即可）
-# 亲情类: curl "https://magazine-api.seldomsemail.workers.dev/search?q=父亲+沉默+背影&top_k=5"
-# 怀旧类: curl "https://magazine-api.seldomsemail.workers.dev/search?q=童年+老家+物件&top_k=5"
-# 感悟类: curl "https://magazine-api.seldomsemail.workers.dev/search?q=陌生人+温暖+小事&top_k=5"
+# 亲情类: curl "https://<your-magazine-api>.workers.dev/search?q=父亲+沉默+背影&top_k=5"
+# 怀旧类: curl "https://<your-magazine-api>.workers.dev/search?q=童年+老家+物件&top_k=5"
+# 感悟类: curl "https://<your-magazine-api>.workers.dev/search?q=陌生人+温暖+小事&top_k=5"
 
 # 4. 获取暗渡陈仓风格以外的所有范文（抒情散文通常不在暗渡列表中）
 # 可先获取所有暗渡 ID 做排除，再搜索
@@ -198,7 +198,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/22027"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=母亲+针线+旧衣服&top_k=3"`，阅读返回的范文，学习它们如何用缝补衣物写母爱。同时读取 ID 19728 和 24725 学习细节控制和情感递进。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=母亲+针线+旧衣服&top_k=3"`，阅读返回的范文，学习它们如何用缝补衣物写母爱。同时读取 ID 19728 和 24725 学习细节控制和情感递进。
 
 2. **确定结构**：
    - 开头：从衣柜深处翻出旧校服，描写上面的针脚
@@ -216,7 +216,7 @@ curl "https://magazine-api.seldomsemail.workers.dev/article/22027"
 
 **AI 处理方式**：
 
-1. **检索参考范文**：执行 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=深夜+陌生人+温暖&top_k=3"` 和 `curl "https://magazine-api.seldomsemail.workers.dev/search?q=城市+孤独+细节&top_k=3"`。阅读范文学习如何在城市题材中控制情感。读取 ID 22027 学习从生活场景折射普遍感受的技巧。
+1. **检索参考范文**：执行 `curl "https://<your-magazine-api>.workers.dev/search?q=深夜+陌生人+温暖&top_k=3"` 和 `curl "https://<your-magazine-api>.workers.dev/search?q=城市+孤独+细节&top_k=3"`。阅读范文学习如何在城市题材中控制情感。读取 ID 22027 学习从生活场景折射普遍感受的技巧。
 
 2. **确定结构**：
    - 开头：深夜加班后走进便利店，热饮柜暖黄色的灯光

@@ -1,0 +1,24 @@
+# Cloudflare Worker 配置模板
+# 复制为 wrangler.toml 后按需修改，然后 `npx wrangler deploy`
+#
+# 部署成功后，命令行会输出你的公开地址，形如：
+#   https://magazine-api.<你的账号子域名>.workers.dev
+# 这个地址就是「云端接口地址」，把它填到写作客户端的 MAGAZINE_BASE 环境变量即可。
+
+name = "magazine-api"
+main = "magazine-worker.js"
+compatibility_date = "2024-09-23"
+
+# Workers AI —— 用于查询时实时把关键词编码成 1024 维向量（bge-m3）
+[ai]
+binding = "AI"
+
+# Vectorize —— 存放范文向量，检索相似范文
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "magazine-articles"
+
+# Workers KV —— 存放文章全文，按 article:<id> 读取
+[[kv_namespaces]]
+binding = "ARTICLE_KV"
+id = "在这里填你创建 KV 命名空间后返回的 id"

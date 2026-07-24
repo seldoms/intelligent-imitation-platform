@@ -14,3 +14,9 @@ venv/
 .DS_Store
 .idea/
 .vscode/
+
+# 语料库导出数据（体积过大，勿入库；获取方式见 magazine-api/DEPLOY.md）
+magazine-api/content/
+*.csv
+*.tar.gz
+wrangler.toml
