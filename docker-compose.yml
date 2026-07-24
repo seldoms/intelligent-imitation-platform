@@ -1,0 +1,17 @@
+services:
+  magazine-writer:
+    build: .
+    image: magazine-writer:latest
+    container_name: magazine-writer
+    ports:
+      - "8000:8000"          # 宿主机端口:容器端口，可按需改宿主机侧，如 "8080:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - SKILLS_ROOT=/app/skills   # 容器内的技能目录（镜像已打包一份快照）
+      # 可选：若服务器无法直接访问 workers.dev，可在此填代理
+      # - MAGAZINE_PROXY=
+    # 可选：用宿主机最新技能覆盖镜像里的快照（去掉前面 # 即可）
+    # volumes:
+    #   - ~/.workbuddy/skills:/app/skills:ro
+    restart: unless-stopped

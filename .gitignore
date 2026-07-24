@@ -1,0 +1,16 @@
+# 运行/构建产物
+server.log
+*.log
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 本地环境变量（勿提交真实密钥）
+.env
+.env.*
+
+# 系统文件
+.DS_Store
+.idea/
+.vscode/
